@@ -1,3 +1,5 @@
+import 'package:club_walk_mock/analysis_page.dart';
+import 'package:club_walk_mock/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -15,10 +17,27 @@ class Home extends StatelessWidget {
             elevation: 0,
             leading: IconButton(
               icon: Icon(Icons.person_outlined),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Profile(),
+                  ),
+                );
+              },
             ),
-            title: Text('ClubWalk'),
             actions: [
+              IconButton(
+                icon: Icon(Icons.leaderboard_outlined),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Analysis(),
+                    ),
+                  );
+                },
+              ),
               IconButton(
                 icon: Icon(Icons.notifications_outlined),
                 onPressed: () {},
