@@ -1,3 +1,4 @@
+import 'package:club_walk_mock/add_report_page.dart';
 import 'package:club_walk_mock/edit_profile_page.dart';
 import 'package:club_walk_mock/report_detail_page.dart';
 import 'package:club_walk_mock/setting_page.dart';
@@ -9,7 +10,15 @@ class Profile extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              fullscreenDialog: true,
+              builder: (context) => AddReport(),
+            ),
+          );
+        },
       ),
       appBar: AppBar(
         title: Text('Profile'),

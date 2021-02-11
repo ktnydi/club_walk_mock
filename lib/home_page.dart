@@ -1,3 +1,4 @@
+import 'package:club_walk_mock/add_report_page.dart';
 import 'package:club_walk_mock/analysis_page.dart';
 import 'package:club_walk_mock/profile_page.dart';
 import 'package:club_walk_mock/report_detail_page.dart';
@@ -9,7 +10,15 @@ class Home extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              fullscreenDialog: true,
+              builder: (context) => AddReport(),
+            ),
+          );
+        },
       ),
       body: CustomScrollView(
         slivers: [
