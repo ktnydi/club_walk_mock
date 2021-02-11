@@ -1,3 +1,4 @@
+import 'package:club_walk_mock/edit_profile_page.dart';
 import 'package:club_walk_mock/setting_page.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +56,14 @@ class Profile extends StatelessWidget {
                         ),
                         ElevatedButton(
                           child: Text('Edit Profile'),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EditProfile(),
+                              ),
+                            );
+                          },
                         ),
                       ],
                     ),

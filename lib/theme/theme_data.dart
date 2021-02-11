@@ -21,6 +21,7 @@ ThemeData lightTheme = ThemeData.from(
 ).copyWith(
   primaryColor: _primary,
   scaffoldBackgroundColor: Color(0xFFF4F5F7),
+  errorColor: Color(0xFFF2798D),
   appBarTheme: AppBarTheme(
     color: _white,
     elevation: 0,
@@ -52,5 +53,11 @@ ThemeData lightTheme = ThemeData.from(
   ),
   cardTheme: CardTheme(
     margin: EdgeInsets.zero,
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    contentPadding: EdgeInsets.all(16),
+    errorStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+    ),
   ),
 );
