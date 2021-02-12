@@ -53,6 +53,7 @@ ThemeData lightTheme = ThemeData.from(
   ),
   cardTheme: CardTheme(
     margin: EdgeInsets.zero,
+    elevation: 0,
   ),
   inputDecorationTheme: InputDecorationTheme(
     contentPadding: EdgeInsets.all(16),
