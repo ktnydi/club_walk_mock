@@ -1,5 +1,6 @@
 import 'package:club_walk_mock/add_report_page.dart';
 import 'package:club_walk_mock/analysis_page.dart';
+import 'package:club_walk_mock/notification_list_page.dart';
 import 'package:club_walk_mock/profile_page.dart';
 import 'package:club_walk_mock/report_detail_page.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +56,14 @@ class Home extends StatelessWidget {
                     ),
                     IconButton(
                       icon: Icon(Icons.notifications_outlined),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NotificationList(),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
