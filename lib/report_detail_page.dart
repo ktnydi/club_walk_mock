@@ -1,19 +1,22 @@
+import 'package:club_walk_mock/add_reply_page.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton.extended(
-        clipBehavior: Clip.antiAlias,
-        label: Text(
-          'Reply Comment',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        onPressed: () {},
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.mode_comment_outlined),
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            backgroundColor: Colors.transparent,
+            isScrollControlled: true,
+            builder: (context) {
+              return AddReply();
+            },
+          );
+        },
       ),
       appBar: AppBar(
         title: Text('Report'),
